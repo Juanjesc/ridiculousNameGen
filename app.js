@@ -12,4 +12,11 @@ window.onload = function() {
         
     })
 
+    // var num_names = NAMES.length;
+
+    
+    // document.getElementById('contador').innerHTML=`Actualmente hay <span>${num_names}</span> palabras`;
+
+    // console.log(texto);
+
 }
