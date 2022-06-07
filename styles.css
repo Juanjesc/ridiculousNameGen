@@ -15,6 +15,9 @@ background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, F
     font-family: 'Montserrat', sans-serif;
     flex-direction: column;
     gap: 4rem;
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
     
 }
@@ -52,11 +55,25 @@ form{
     padding: 2rem;
     border-radius: 20px;
     height: 60vh;
-    box-shadow: 0 0 100px white;
+    box-shadow: 0 0 100px black;
     position: relative;
+    z-index: 9999999;
+
 
     
     
+}
+form:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    background: transparent linear-gradient(to bottom, #FFFFFF00 60%, #000000 100%);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: 100%;
+  
 }
 form h1{
     color: white;
@@ -64,7 +81,20 @@ form h1{
     text-shadow: 2px 2px 2px black;
     text-align: center;
     margin-bottom: 4rem;
-
+    animation: titi 5s infinite alternate-reverse;
+    position: relative;
+    
+}
+@keyframes titi {
+    from{
+        text-shadow: 0px 0px 10px white;
+        color: black;
+    }
+    to{
+        text-shadow: 0px 0px 10px black;
+        color: white;
+    }
+   
 }
 #name{
     padding: 1rem;
@@ -75,10 +105,18 @@ form h1{
     box-shadow: 0 0 20px black;
     text-align: center;
     font-size: 24px;
-    background-color: rgba(32, 45, 66, .4);
+    background-color: rgba(32, 45, 66, .7);
     color: white;
+    text-shadow: 2px 2px 2px black;
+   
    
 
+}
+#name::placeholder{
+    color: white;
+
+    font-family: 'Montserrat', sans-serif;
+   
 }
 .campo{
     width: 60%;
@@ -106,6 +144,9 @@ form h1{
     form{
         width: 70%;
     }
+    body{
+        background-position: center;
+    }
 }
 @media (max-width: 700px) { 
     body{
@@ -122,7 +163,7 @@ form h1{
     }
     form{
         width: 80%;
-        box-shadow: 0 0 50px white;
+        box-shadow: 0 0 50px black;
 
     }
     form h1{
